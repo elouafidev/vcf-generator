@@ -264,7 +264,7 @@ class VCFGenerator
      */
     public function toUri(): string
     {
-        return "data:text/x-vcard;charset=utf-8," . $this->vcfContent();
+        return "data:text/x-vcard;charset=utf-8," . rawurlencode($this->vcfContent());
     }
 
     /**
